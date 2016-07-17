@@ -1,3 +1,0 @@
-F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015/CMakeFiles/LogPolarFFTTemplateMatching.dir
-F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015/CMakeFiles/ALL_BUILD.dir
-F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015/CMakeFiles/ZERO_CHECK.dir
