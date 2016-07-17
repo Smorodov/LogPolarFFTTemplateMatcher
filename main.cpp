@@ -203,6 +203,8 @@ int main(int argc, unsigned int** argv)
 	Mat im1 = imread("cat_part.png", 0);
 	im1.convertTo(im1, CV_32FC1, 1.0 / 255.0);
 	
+	imshow("im1", im1);
+	imshow("im0", im0);
 	// As input we need equal sized images, with the same aspect ratio,
 	// scale difference should not exceed 1.8 times.
 
