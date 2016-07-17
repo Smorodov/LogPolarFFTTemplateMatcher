@@ -1,0 +1,18 @@
+﻿  main.cpp
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(72): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(73): warning C4305: 'initializing': truncation from 'double' to 'float'
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(81): warning C4305: '=': truncation from 'double' to 'float'
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(82): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(97): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(98): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(100): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(101): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(102): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(103): warning C4305: 'initializing': truncation from 'double' to 'float'
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(152): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(153): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(158): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp(159): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  LogPolarFFTTemplateMatching.vcxproj -> F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\build\Debug\LogPolarFFTTemplateMatching.exe
+  LogPolarFFTTemplateMatching.vcxproj -> F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/build/Debug/LogPolarFFTTemplateMatching.pdb (Full PDB)

@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{47D73A09-802D-3704-84B6-DBC4187F5821}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>LogPolarFFTTemplateMatching</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LogPolarFFTTemplateMatching.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LogPolarFFTTemplateMatching</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LogPolarFFTTemplateMatching.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LogPolarFFTTemplateMatching</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">LogPolarFFTTemplateMatching.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">LogPolarFFTTemplateMatching</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">LogPolarFFTTemplateMatching.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">LogPolarFFTTemplateMatching</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_videostab310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_superres310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_stitching310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_shape310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_photo310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_objdetect310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_calib3d310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_features2d310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_ml310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_highgui310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_videoio310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_imgcodecs310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_flann310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_video310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_imgproc310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_core310d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/build/Debug/LogPolarFFTTemplateMatching.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/build/Debug/LogPolarFFTTemplateMatching.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_videostab310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_superres310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_stitching310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_shape310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_photo310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_objdetect310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_calib3d310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_features2d310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_ml310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_highgui310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_videoio310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_imgcodecs310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_flann310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_video310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_imgproc310.lib;F:\Documents\opencv\vs2015\lib\Release\opencv_core310.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/build/Release/LogPolarFFTTemplateMatching.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/build/Release/LogPolarFFTTemplateMatching.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_videostab310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_superres310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_stitching310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_shape310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_photo310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_objdetect310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_calib3d310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_features2d310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_ml310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_highgui310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_videoio310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_imgcodecs310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_flann310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_video310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_imgproc310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_core310d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/build/MinSizeRel/LogPolarFFTTemplateMatching.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/build/MinSizeRel/LogPolarFFTTemplateMatching.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>f:\Documents\opencv\vs2015;F:\Documents\opencv\include;F:\Documents\opencv\include\opencv;F:\Documents\opencv\modules\core\include;F:\Documents\opencv\modules\flann\include;F:\Documents\opencv\modules\imgproc\include;F:\Documents\opencv\modules\ml\include;F:\Documents\opencv\modules\photo\include;F:\Documents\opencv\modules\video\include;F:\Documents\opencv\modules\imgcodecs\include;F:\Documents\opencv\modules\shape\include;F:\Documents\opencv\modules\videoio\include;F:\Documents\opencv\modules\highgui\include;F:\Documents\opencv\modules\objdetect\include;F:\Documents\opencv\modules\superres\include;F:\Documents\opencv\modules\ts\include;F:\Documents\opencv\modules\features2d\include;F:\Documents\opencv\modules\calib3d\include;F:\Documents\opencv\modules\stitching\include;F:\Documents\opencv\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_videostab310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_superres310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_stitching310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_shape310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_photo310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_objdetect310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_calib3d310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_features2d310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_ml310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_highgui310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_videoio310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_imgcodecs310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_flann310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_video310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_imgproc310d.lib;F:\Documents\opencv\vs2015\lib\Debug\opencv_core310d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/build/RelWithDebInfo/LogPolarFFTTemplateMatching.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/build/RelWithDebInfo/LogPolarFFTTemplateMatching.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HF:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching" "-BF:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015" --check-stamp-file "F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/CMakeLists.txt;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\CMakeLists.txt;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeCCompiler.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;F:\Documents\opencv\vs2015\OpenCVConfig-version.cmake;F:\Documents\opencv\vs2015\OpenCVConfig.cmake;F:\Documents\opencv\vs2015\OpenCVModules.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HF:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching" "-BF:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015" --check-stamp-file "F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/CMakeLists.txt;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\CMakeLists.txt;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeCCompiler.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;F:\Documents\opencv\vs2015\OpenCVConfig-version.cmake;F:\Documents\opencv\vs2015\OpenCVConfig.cmake;F:\Documents\opencv\vs2015\OpenCVModules.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HF:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching" "-BF:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015" --check-stamp-file "F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/CMakeLists.txt;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\CMakeLists.txt;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeCCompiler.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;F:\Documents\opencv\vs2015\OpenCVConfig-version.cmake;F:\Documents\opencv\vs2015\OpenCVConfig.cmake;F:\Documents\opencv\vs2015\OpenCVModules.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HF:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching" "-BF:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015" --check-stamp-file "F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/CMakeLists.txt;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\CMakeLists.txt;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeCCompiler.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\3.5.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;F:\Documents\opencv\vs2015\OpenCVConfig-version.cmake;F:\Documents\opencv\vs2015\OpenCVConfig.cmake;F:\Documents\opencv\vs2015\OpenCVModules.cmake;F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015/ZERO_CHECK.vcxproj">
+      <Project>B4BAAC5F-B108-3E46-8110-D3314D330EB1</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

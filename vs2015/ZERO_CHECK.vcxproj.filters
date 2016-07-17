@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\Documents\Visual Studio 2015\Projects\LogPolarFFTTemplateMatching\vs2015\CMakeFiles\7b464501f8c2dc1957b42f2276d8be75\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D40B77B4-BE6F-3D60-A7BF-C625E28E5B04}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

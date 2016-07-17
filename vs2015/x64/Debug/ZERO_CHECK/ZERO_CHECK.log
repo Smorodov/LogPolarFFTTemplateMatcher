@@ -1,0 +1,8 @@
+﻿  Checking Build System
+  CMake is re-running because F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015/CMakeFiles/generate.stamp is out-of-date.
+    the file 'F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/CMakeLists.txt'
+    is newer than 'F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: F:/Documents/Visual Studio 2015/Projects/LogPolarFFTTemplateMatching/vs2015
