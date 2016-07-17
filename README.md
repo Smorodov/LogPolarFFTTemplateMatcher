@@ -1,6 +1,8 @@
 # LogPolarFFTTemplateMatcher
 
-This project is an implementation of rotation and scale invariant Log-Polar FFT template matcher.
+This project is an opencv implementation of rotation and scale invariant Log-Polar FFT template matcher.
+
+![Alt text](FFTTM.PNG?raw=true "Result")
 
 References
 ----------
