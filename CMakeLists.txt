@@ -16,7 +16,7 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 # ----------------------------------------------------------------------------  
 # ищем все .cpp и .h файлы и добавляем их в наш проект 
 # ----------------------------------------------------------------------------
-  set(folder_source main.cpp FFT_tools.cpp)
+  set(folder_source main.cpp)
   set(folder_header  )
   SOURCE_GROUP("Source Files" FILES ${folder_source})
   SOURCE_GROUP("Header Files" FILES ${folder_header})
