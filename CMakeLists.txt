@@ -29,6 +29,9 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 # ---------------------------------------------------------------------------- 
   TARGET_LINK_LIBRARIES(${PROJ_NAME}_example ${OpenCV_LIBS})
 
+OPTION(BUILD_TEST "Build test" OFF) 
+
+if(BUILD_TEST)
 # ----------------------------------------------------------------------------  
 # создаем проект
 # ----------------------------------------------------------------------------
@@ -37,3 +40,4 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 # добавляем Lib-ы opencv 
 # ---------------------------------------------------------------------------- 
   TARGET_LINK_LIBRARIES(${PROJ_NAME}_test ${OpenCV_LIBS})
+endif()

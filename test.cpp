@@ -202,7 +202,7 @@ float rrDist(RotatedRect r1, RotatedRect r2)
 //-----------------------------------------------------------------------------------------------------
 TEST(imgProc_LogPolarFFTTemplateMatch, resultTest)
 {
-    //cvtest::TS::ptr()->get_data_path() + "myfacetracker/clip.avi";
+    //cvtest::TS::ptr()->get_data_path() + "denoising/lena_orig.png";
     Mat test_img1 = imread("lena_orig.png", 0);
     
     EXPECT_EQ(false, test_img1.empty());
