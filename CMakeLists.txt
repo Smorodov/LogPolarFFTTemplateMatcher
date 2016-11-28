@@ -32,6 +32,8 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 OPTION(BUILD_TEST "Build test" OFF) 
 
 if(BUILD_TEST)
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
 # ----------------------------------------------------------------------------  
 # создаем проект
 # ----------------------------------------------------------------------------
@@ -39,5 +41,5 @@ if(BUILD_TEST)
 # ----------------------------------------------------------------------------
 # добавляем Lib-ы opencv 
 # ---------------------------------------------------------------------------- 
-  TARGET_LINK_LIBRARIES(${PROJ_NAME}_test ${OpenCV_LIBS})
+  TARGET_LINK_LIBRARIES(${PROJ_NAME}_test ${OpenCV_LIBS} ${GTEST_BOTH_LIBRARIES})
 endif()
