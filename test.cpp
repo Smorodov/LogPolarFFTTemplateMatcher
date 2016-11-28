@@ -1,5 +1,6 @@
 #include "fftm.hpp"
 #include "gtest/gtest.h"
+
 using namespace std;
 using namespace cv;
 
@@ -198,9 +199,11 @@ TEST(imgProc_LogPolarFFTTemplateMatch, resultTest)
 	Mat test_img1 = imread("lena_orig.png", 0);
 	if (test_img1.empty())
 	{
-		cout << "Error loading imput image. " << endl;
-		EXPECT_NE(true, test_img1.empty());
+		cout << "Error loading imput image. " << endl;		
 	}
+	
+	EXPECT_NE(true, test_img1.empty());
+
 	Mat test_img2;
 	RotatedRect rect;
 	generateRotRectROI(test_img1, rect);
@@ -217,9 +220,6 @@ TEST(imgProc_LogPolarFFTTemplateMatch, resultTest)
 	{
 		line(test_img1, rect_points[j], rect_points[(j + 1) % 4], Scalar(1, 0, 0), 2, CV_AA);
 	}
-
-	//imshow("img1", test_img1);
-	//imshow("img2", test_img2);
 	
 	float dist = rrDist(rr, rect);
 	EXPECT_LE(dist, 8);
