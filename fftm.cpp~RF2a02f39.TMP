@@ -123,7 +123,7 @@ float logpolar(Mat& src, Mat& dst)
 // As input we need equal sized images, with the same aspect ratio,
 // scale difference should not exceed 1.8 times.
 //-----------------------------------------------------------------------------------------------------
-RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1, double canny_threshold2)
+RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1=50, double canny_threshold2=100)
 {
     // Accept 1 or 3 channel CV_8U, CV_32F or CV_64F images.
     CV_Assert((im0.type() == CV_8UC1) || (im0.type() == CV_8UC3) ||
@@ -136,8 +136,8 @@ RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1
 
     CV_Assert(im1.channels() == 1 || im1.channels() == 3 || im1.channels() == 4);
 
-    Mat im0_tmp = im0.clone();
-    Mat im1_tmp = im1.clone();
+    
+
     if (im0.channels() == 3)
     {
         cvtColor(im0, im0, cv::COLOR_BGR2GRAY);
@@ -179,8 +179,8 @@ RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1
     }
 
 
-    Canny(im0, im0, canny_threshold1, canny_threshold2); // you can change this
-    Canny(im1, im1, canny_threshold1, canny_threshold2);
+    Canny(im0, im0, 50, 100); // you can change this
+    Canny(im1, im1, 50, 100);
     
     // Ensure both images are of CV_32FC1 type
     im0.convertTo(im0, CV_32FC1, 1.0 / 255.0);
@@ -250,9 +250,6 @@ RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1
     rr.angle = -angle;
     rr.size.width = im1.cols / scale;
     rr.size.height = im1.rows / scale;
-
-    im0 = im0_tmp.clone();
-    im1 = im1_tmp.clone();
 
     return rr;
 }
