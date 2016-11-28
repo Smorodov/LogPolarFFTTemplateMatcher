@@ -27,6 +27,13 @@ bool boxInRange(cv::Rect r, cv::RotatedRect& rr)
 //-----------------------------------------------------------------------------------------------------
 void generateRotRectROI(Mat& img, RotatedRect& rect)
 {
+    if (img.empty())
+    {
+        cout << "Empty image in generateRotRectROI. " << endl;
+        rect = RotatedRect();
+        return;
+    }
+
     int w = img.cols;
     int h = img.rows;
     Rect roi(0, 0, w, h);
@@ -188,7 +195,7 @@ void getRotRectImg(cv::RotatedRect rr, Mat &img, Mat& dst)
 //-----------------------------------------------------------------------------------------------------
 float rrDist(RotatedRect r1, RotatedRect r2)
 {
-    return norm(r1.center - r2.center)+fabs(r1.size.width-r2.size.width)+ fabs(r1.size.height - r2.size.height)+fabs(r1.angle-r2.angle);
+    return norm(r1.center - r2.center) + fabs(r1.size.width-r2.size.width) + fabs(r1.size.height - r2.size.height) + fabs(r1.angle-r2.angle);
 }
 //-----------------------------------------------------------------------------------------------------
 //
@@ -197,20 +204,25 @@ TEST(imgProc_LogPolarFFTTemplateMatch, resultTest)
 {
     //cvtest::TS::ptr()->get_data_path() + "myfacetracker/clip.avi";
     Mat test_img1 = imread("lena_orig.png", 0);
+    
+    EXPECT_EQ(false, test_img1.empty());
+    
     if (test_img1.empty())
     {
-        cout << "Error loading imput image. " << endl;        
+        cout << "Error loading imput image. " << endl;
+        return;
     }
     
-    EXPECT_NE(true, test_img1.empty());
-
     Mat test_img2;
     RotatedRect rect;
     generateRotRectROI(test_img1, rect);
+
+    EXPECT_NE(0, rect.size.area());
+
     test_img2 = Mat(rect.size, test_img1.type());
     getRotRectImg(rect, test_img1, test_img2);
     resize(test_img2, test_img2, test_img1.size());
-    RotatedRect rr = LogPolarFFTTemplateMatch(test_img1, test_img2);
+    RotatedRect rr = LogPolarFFTTemplateMatch(test_img1, test_img2, 200,100);
 
     EXPECT_NE(0, rr.size.area());
 

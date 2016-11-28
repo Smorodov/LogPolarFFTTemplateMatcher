@@ -6,8 +6,8 @@ using namespace cv;
 //-----------------------------------------------------------------------------------------------------
 int main(int argc, unsigned int** argv)
 {
-    Mat im0 = imread("cat.png", 0);
-    Mat im1 = imread("cat_part.png", 0);
+    Mat im0 = imread("cat.png", 1);
+    Mat im1 = imread("cat_part.png", 1);
 
     imshow("im1", im1);
     imshow("im0", im0);
@@ -15,7 +15,7 @@ int main(int argc, unsigned int** argv)
     // As input we need equal sized images, with the same aspect ratio,
     // scale difference should not exceed 1.8 times.
 
-    RotatedRect rr = LogPolarFFTTemplateMatch(im0, im1,50,100);
+    RotatedRect rr = LogPolarFFTTemplateMatch(im0, im1,200,100);
 
     // Plot rotated rectangle, to check result correctness
     Point2f rect_points[4];

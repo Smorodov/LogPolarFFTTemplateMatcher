@@ -8,6 +8,6 @@
 // As input we need equal sized images, with the same aspect ratio,
 // scale difference should not exceed 1.8 times.
 //-----------------------------------------------------------------------------------------------------
-cv::RotatedRect LogPolarFFTTemplateMatch(cv::Mat& im0, cv::Mat& im1, double canny_threshold1=50, double canny_threshold2=100);
+cv::RotatedRect LogPolarFFTTemplateMatch(cv::Mat& im0, cv::Mat& im1, double canny_threshold1=200, double canny_threshold2=100);
 #endif
 #endif
