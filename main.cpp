@@ -196,10 +196,10 @@ RotatedRect imreg(Mat& im0, Mat& im1)
 //-----------------------------------------------------------------------------------------------------
 int main(int argc, unsigned int** argv)
 {
-	Mat im0 = imread("1.png", 0);
+	Mat im0 = imread("cat.png", 0);
 	im0.convertTo(im0, CV_32FC1, 1.0 / 255.0);
 
-	Mat im1 = imread("2.png", 0);
+	Mat im1 = imread("cat_part.png", 0);
 	im1.convertTo(im1, CV_32FC1, 1.0 / 255.0);
 	
 	imshow("im1", im1);
