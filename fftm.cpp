@@ -179,8 +179,8 @@ RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1)
 	}
 
 
-	Canny(im0, im0, 200, 100); // you can change this
-	Canny(im1, im1, 200, 100);
+	Canny(im0, im0, 50, 100); // you can change this
+	Canny(im1, im1, 50, 100);
 	
 	// Ensure both images are of CV_32FC1 type
 	im0.convertTo(im0, CV_32FC1, 1.0 / 255.0);
