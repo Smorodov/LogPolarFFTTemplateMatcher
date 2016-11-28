@@ -16,15 +16,24 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 # ----------------------------------------------------------------------------  
 # ищем все .cpp и .h файлы и добавляем их в наш проект 
 # ----------------------------------------------------------------------------
-  set(folder_source main.cpp)
-  set(folder_header  )
+  set(folder_source fftm.cpp test.cpp example.cpp)
+  set(folder_header fftm.hpp)
   SOURCE_GROUP("Source Files" FILES ${folder_source})
   SOURCE_GROUP("Header Files" FILES ${folder_header})
 # ----------------------------------------------------------------------------  
 # создаем проект
 # ----------------------------------------------------------------------------
-  ADD_EXECUTABLE(${PROJ_NAME} ${folder_source} ${folder_header})
+  ADD_EXECUTABLE(${PROJ_NAME}_example fftm.cpp example.cpp fftm.hpp)
 # ----------------------------------------------------------------------------
 # добавляем Lib-ы opencv 
 # ---------------------------------------------------------------------------- 
-  TARGET_LINK_LIBRARIES(${PROJ_NAME} ${OpenCV_LIBS})
+  TARGET_LINK_LIBRARIES(${PROJ_NAME}_example ${OpenCV_LIBS})
+
+# ----------------------------------------------------------------------------  
+# создаем проект
+# ----------------------------------------------------------------------------
+  ADD_EXECUTABLE(${PROJ_NAME}_test fftm.cpp test.cpp fftm.hpp)
+# ----------------------------------------------------------------------------
+# добавляем Lib-ы opencv 
+# ---------------------------------------------------------------------------- 
+  TARGET_LINK_LIBRARIES(${PROJ_NAME}_test ${OpenCV_LIBS})

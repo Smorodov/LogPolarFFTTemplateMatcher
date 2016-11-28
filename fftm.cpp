@@ -1,3 +1,4 @@
+#include "opencv2/core.hpp"
 #include "opencv2/opencv.hpp"
 
 using namespace std;
@@ -21,7 +22,7 @@ void Recomb(Mat &src, Mat &dst)
 //----------------------------------------------------------
 // 2D Forward FFT
 //----------------------------------------------------------
-void ForwardFFT(Mat &Src, Mat *FImg, bool do_recomb=true)
+void ForwardFFT(Mat &Src, Mat *FImg, bool do_recomb = true)
 {
 	int M = getOptimalDFTSize(Src.rows);
 	int N = getOptimalDFTSize(Src.cols);
@@ -47,7 +48,7 @@ void ForwardFFT(Mat &Src, Mat *FImg, bool do_recomb=true)
 //----------------------------------------------------------
 // 2D inverse FFT
 //----------------------------------------------------------
-void InverseFFT(Mat *FImg, Mat &Dst, bool do_recomb=true)
+void InverseFFT(Mat *FImg, Mat &Dst, bool do_recomb = true)
 {
 	if (do_recomb)
 	{
@@ -119,10 +120,72 @@ float logpolar(Mat& src, Mat& dst)
 	return log_base;
 }
 //-----------------------------------------------------------------------------------------------------
-//
+// As input we need equal sized images, with the same aspect ratio,
+// scale difference should not exceed 1.8 times.
 //-----------------------------------------------------------------------------------------------------
-RotatedRect imreg(Mat& im0, Mat& im1)
+RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1)
 {
+	// Accept 1 or 3 channel CV_8U, CV_32F or CV_64F images.
+	CV_Assert((im0.type() == CV_8UC1) || (im0.type() == CV_8UC3) ||
+		(im0.type() == CV_32FC1) || (im0.type() == CV_32FC3) ||
+		(im0.type() == CV_64FC1) || (im0.type() == CV_64FC3));
+
+	CV_Assert(im0.rows == im1.rows && im0.cols == im1.cols);
+
+	CV_Assert(im0.channels() == 1 || im0.channels() == 3 || im0.channels() == 4);
+
+	CV_Assert(im1.channels() == 1 || im1.channels() == 3 || im1.channels() == 4);
+
+	
+
+	if (im0.channels() == 3)
+	{
+		cvtColor(im0, im0, cv::COLOR_BGR2GRAY);
+	}
+
+	if (im0.channels() == 4)
+	{
+		cvtColor(im0, im0, cv::COLOR_BGRA2GRAY);
+	}
+
+	if (im1.channels() == 3)
+	{
+		cvtColor(im1, im1, cv::COLOR_BGR2GRAY);
+	}
+
+	if (im1.channels() == 4)
+	{
+		cvtColor(im1, im1, cv::COLOR_BGRA2GRAY);
+	}
+
+	if (im0.type() == CV_32FC1)
+	{
+		im0.convertTo(im0, CV_8UC1, 1.0 / 255.0);
+	}
+
+	if (im1.type() == CV_32FC1)
+	{
+		im1.convertTo(im1, CV_8UC1, 1.0 / 255.0);
+	}
+
+	if (im0.type() == CV_64FC1)
+	{
+		im0.convertTo(im0, CV_8UC1, 1.0);
+	}
+
+	if (im1.type() == CV_64FC1)
+	{
+		im1.convertTo(im1, CV_8UC1, 1.0);
+	}
+
+
+	Canny(im0, im0, 200, 100); // you can change this
+	Canny(im1, im1, 200, 100);
+	
+	// Ensure both images are of CV_32FC1 type
+	im0.convertTo(im0, CV_32FC1, 1.0 / 255.0);
+	im1.convertTo(im1, CV_32FC1, 1.0 / 255.0);
+
 	Mat F0[2], F1[2];
 	Mat f0, f1;
 	ForwardFFT(im0, F0);
@@ -171,7 +234,7 @@ RotatedRect imreg(Mat& im0, Mat& im1)
 		angle -= 180.0;
 	}
 
-	// Now rotate and scale fragmet back, then find translation
+	// Now rotate and scale fragment back, then find translation
 	Mat rot_mat = getRotationMatrix2D(Point(im1.cols / 2, im1.rows / 2), angle, 1.0 / scale);
 
 	// rotate and scale
@@ -189,35 +252,4 @@ RotatedRect imreg(Mat& im0, Mat& im1)
 	rr.size.height = im1.rows / scale;
 
 	return rr;
-}
-
-//-----------------------------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------------------------
-int main(int argc, unsigned int** argv)
-{
-	Mat im0 = imread("cat.png", 0);
-	im0.convertTo(im0, CV_32FC1, 1.0 / 255.0);
-
-	Mat im1 = imread("cat_part.png", 0);
-	im1.convertTo(im1, CV_32FC1, 1.0 / 255.0);
-	
-	imshow("im1", im1);
-	imshow("im0", im0);
-	// As input we need equal sized images, with the same aspect ratio,
-	// scale difference should not exceed 1.8 times.
-
-	RotatedRect rr=imreg(im0,im1);
-
-	// Plot rotated rectangle, to check result correctness
-	Point2f rect_points[4];
-	rr.points(rect_points);
-	for (int j = 0; j < 4; j++)
-	{
-		line(im0, rect_points[j], rect_points[(j + 1) % 4], Scalar(1, 0, 0), 2, CV_AA);
-	}
-
-	imshow("img", im0);
-	
-	waitKey();
 }
