@@ -93,8 +93,8 @@ void highpass(Size sz, Mat& dst)
 //-----------------------------------------------------------------------------------------------------
 float logpolar(Mat& src, Mat& dst)
 {
-	float radii = src.rows;
-	float angles = src.cols;
+	float radii = src.cols;
+	float angles = src.rows;
 	Point2f center(src.cols / 2, src.rows / 2);
 	float d = norm(Vec2f(src.cols - center.x, src.rows - center.y));
 	float log_base = pow(10.0, log10(d) / radii);
@@ -196,10 +196,10 @@ RotatedRect imreg(Mat& im0, Mat& im1)
 //-----------------------------------------------------------------------------------------------------
 int main(int argc, unsigned int** argv)
 {
-	Mat im0 = imread("cat.png", 0);
+	Mat im0 = imread("1.png", 0);
 	im0.convertTo(im0, CV_32FC1, 1.0 / 255.0);
 
-	Mat im1 = imread("cat_part.png", 0);
+	Mat im1 = imread("2.png", 0);
 	im1.convertTo(im1, CV_32FC1, 1.0 / 255.0);
 	
 	imshow("im1", im1);
