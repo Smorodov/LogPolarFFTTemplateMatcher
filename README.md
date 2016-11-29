@@ -43,6 +43,8 @@ int main(int argc, unsigned int** argv)
 }
 ```
 
+Program will show result as below:
+
 ![Result](FFTTM.PNG "Result")
 
 References
