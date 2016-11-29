@@ -2,7 +2,10 @@
 
 This project is an opencv implementation of rotation and scale invariant Log-Polar FFT template matcher.
 
-Dependencies: if you want build test, you'll need gtest library.
+Dependencies:
+
+* *opencv* mandatory.
+* *gtest* if you want build test.
 
 Appended canny preprocessing, results become more robust.
 You can change its parameters in LogPolarFFTTemplateMatch method.
