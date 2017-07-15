@@ -160,22 +160,22 @@ RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1
 
     if (im0.type() == CV_32FC1)
     {
-        im0.convertTo(im0, CV_8UC1, 1.0 / 255.0);
+       im0.convertTo(im0, CV_8UC1, 255.0);
     }
 
     if (im1.type() == CV_32FC1)
     {
-        im1.convertTo(im1, CV_8UC1, 1.0 / 255.0);
+       im1.convertTo(im1, CV_8UC1, 255.0);
     }
 
     if (im0.type() == CV_64FC1)
     {
-        im0.convertTo(im0, CV_8UC1, 1.0);
+        im0.convertTo(im0, CV_8UC1, 255.0);
     }
 
     if (im1.type() == CV_64FC1)
     {
-        im1.convertTo(im1, CV_8UC1, 1.0);
+        im1.convertTo(im1, CV_8UC1, 255.0);
     }
 
 
