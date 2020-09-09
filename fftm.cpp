@@ -199,13 +199,13 @@ RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1
     // Apply it in freq domain
     f0 = f0.mul(h);
     f1 = f1.mul(h);
-
+/*
     cv::Mat mask = cv::Mat::zeros(f0.size(), CV_8UC1);
     cv::rectangle(mask, cv::Point(f0.cols / 2, f0.rows / 2), cv::Point(f0.cols, 0), Scalar::all(255), -1);
     mask = 255 - mask;
     f0.setTo(0, mask);
     f1.setTo(0, mask);
-    
+*/    
     cv::normalize(f0, f0, 0, 1, NORM_MINMAX);
     cv::normalize(f1, f1, 0, 1, NORM_MINMAX);
     //cv::imshow("f0", f0);
