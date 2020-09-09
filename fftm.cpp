@@ -116,7 +116,7 @@ float logpolar(Mat& src, Mat& dst)
         }
         theta += d_theta;
     }
-    remap(src, dst, map_x, map_y, CV_INTER_LINEAR, BORDER_CONSTANT, Scalar(0, 0, 0));
+    remap(src, dst, map_x, map_y, cv::INTER_LINEAR, BORDER_CONSTANT, Scalar(0, 0, 0));
     return log_base;
 }
 //-----------------------------------------------------------------------------------------------------
@@ -179,8 +179,8 @@ RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1
     }
 
 
-    Canny(im0, im0, canny_threshold1, canny_threshold2); // you can change this
-    Canny(im1, im1, canny_threshold1, canny_threshold2);
+   // Canny(im0, im0, canny_threshold1, canny_threshold2); // you can change this
+  //  Canny(im1, im1, canny_threshold1, canny_threshold2);
     
     // Ensure both images are of CV_32FC1 type
     im0.convertTo(im0, CV_32FC1, 1.0 / 255.0);
@@ -192,7 +192,6 @@ RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1
     ForwardFFT(im1, F1);
     magnitude(F0[0], F0[1], f0);
     magnitude(F1[0], F1[1], f1);
-
     // Create filter 
     Mat h;
     highpass(f0.size(), h);
@@ -201,11 +200,30 @@ RotatedRect LogPolarFFTTemplateMatch(Mat& im0, Mat& im1, double canny_threshold1
     f0 = f0.mul(h);
     f1 = f1.mul(h);
 
+    cv::Mat mask = cv::Mat::zeros(f0.size(), CV_8UC1);
+    cv::rectangle(mask, cv::Point(f0.cols / 2, f0.rows / 2), cv::Point(f0.cols, 0), Scalar::all(255), -1);
+    mask = 255 - mask;
+    f0.setTo(0, mask);
+    f1.setTo(0, mask);
+    
+    cv::normalize(f0, f0, 0, 1, NORM_MINMAX);
+    cv::normalize(f1, f1, 0, 1, NORM_MINMAX);
+    //cv::imshow("f0", f0);
+    //cv::imshow("f1", f1);
+    
     float log_base;
     Mat f0lp, f1lp;
 
     log_base = logpolar(f0, f0lp);
     log_base = logpolar(f1, f1lp);
+
+    cv::Mat dbgImg= cv::Mat::zeros(f0lp.size(), CV_32FC3);
+    cv::Mat Z = cv::Mat::zeros(f0lp.size(), CV_32FC1);
+
+    //std::vector<cv::Mat> ch = {f0lp,f1lp,Z};
+    //cv::merge(ch, dbgImg);
+    //cv::imshow("dbgImg", dbgImg);
+
 
     // Find rotation and scale
     Point2d rotation_and_scale = cv::phaseCorrelate(f1lp, f0lp);

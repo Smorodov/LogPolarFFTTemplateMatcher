@@ -22,7 +22,7 @@ int main(int argc, unsigned int** argv)
     rr.points(rect_points);
     for (int j = 0; j < 4; j++)
     {
-        line(im0, rect_points[j], rect_points[(j + 1) % 4], Scalar(255, 0, 0), 2, CV_AA);
+        line(im0, rect_points[j], rect_points[(j + 1) % 4], Scalar(255, 0, 0), 2, LINE_AA);
     }
 
     imshow("result", im0);
