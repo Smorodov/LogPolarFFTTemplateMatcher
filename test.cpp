@@ -42,13 +42,15 @@ void generateRotRectROI(Mat& img, RotatedRect& rect)
     {
         int x = rng.uniform(w/2-w/5, w/2+w/5);
         int y = rng.uniform(h/2-h/5, h/2+h/5);
-        float scale= rng.uniform(0.85f, 1.2f);
+        float scale= rng.uniform(0.75f, 1.2f);
         int wr = float(w)*scale;
         int hr = float(h)*scale;
         float ang= rng.uniform(-45.0, 45.0);
+        
         rect = cv::RotatedRect(Point2f(x, y), Size(wr, hr), ang);
         if (boxInRange(roi, rect))
         {
+            std::cout << "dx=" << x- (w / 2) << " dy=" << (y-h/2) << " scale=" << scale << " angle=" << ang << std::endl;
             break;
         }
     }
